@@ -225,6 +225,15 @@ class LoginScreen(Image, Screen):
                     label = le.classes_[j]
                     if label == "Real":
                         rect_color = (255, 128, 255)
+                        """
+                        # Important Note
+                        # Recognition Runs here
+                        # Do not forgot to import face recognition
+                        username = RecognizeMe(frame)
+                        if username != "unknown":
+                            # following lines should be shifted to inside this if block
+                            # Then comment/ remove line username = 'Arun'
+                        """
                         ev = OnFaceRecognition()
                         ev.bind(on_recognize=custom_event_callback)
                         username = 'Arun'
